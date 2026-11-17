@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>education</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        body {
+            background: #f5f8f1;
+            color: #252525;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: black;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #646881;
+        }
+
+        .page-section {
+            min-height: 75vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .page-box {
+            width: 320px;
+            min-height: 320px;
+            background: #646881;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 35px;
+            text-align: center;
+            color: white;
+            transition: transform 0.5s ease;
+        }
+
+        .page-box h1 {
+            font-size: 36px;
+        }
+
+        .page-box p {
+            font-size: 16px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 15px;
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="community.html">Community</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-section">
+            <div class="page-box">
+                <h1>Education.</h1>
+                <p>
+                    Learn new things, share ideas, and achieve your goals.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>CSE6624 Meiirzhan Seitkhan 081011552746 niche-13</p>
+    </footer>
+    <script>
+    let angle = 0;
+    const box = document.querySelector(".page-box");
+
+    document.addEventListener("keydown", function(event) {
+        if (event.key === "ArrowRight") angle += 90;
+        if (event.key === "ArrowLeft") angle -= 90;
+
+        box.style.transform = `rotateZ(${angle}deg)`;
+    });
+    </script>
+</body>
+</html>
